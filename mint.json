@@ -1,5 +1,5 @@
 {
-  "name": "Base",
+  "name": "Your Company",
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
@@ -13,8 +13,13 @@
   },
   "navigation": [
     {
-      "label": "Atividades",
-      "href": "/atividades"
+      "group": "Principal",
+      "pages": [
+        {
+          "label": "Atividades",
+          "href": "/atividades"
+        }
+      ]
     }
   ]
 }
