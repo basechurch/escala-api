@@ -13,12 +13,9 @@
   },
   "navigation": [
     {
-      "group": "Principal",
+      "group": "Atividades",
       "pages": [
-        {
-          "label": "Atividades",
-          "href": "/atividades"
-        }
+        "/atividades"
       ]
     }
   ]
