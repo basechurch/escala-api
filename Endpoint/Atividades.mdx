@@ -1,0 +1,95 @@
+---
+title: "atividades"
+description: "Este endpoint retorna uma lista de atividades cadastradas, permitindo a filtragem por organização e ministério."
+---
+
+# GET /atividades
+
+***
+
+## Parâmetros de Filtro
+
+| Parâmetro        | Tipo   | Obrigatório | Descrição                    |
+| ---------------- | ------ | ----------- | ---------------------------- |
+| `organizacao_id` | Number | Sim         | ID da organização associada. |
+| `ministerio_id`  | Number | Não         | ID do ministério associado.  |
+
+***
+
+## Exemplo de Requisição
+
+### Requisição HTTP
+
+```bash
+GET /atividades?organizacao_id=1&ministerio_id=2 HTTP/1.1
+Host: api.escalas.basechurch.com.br
+```
+
+***
+
+## Exemplo de Resposta
+
+### Resposta HTTP
+
+**Status Code**: `200 OK`
+
+```json
+{
+  "code": 200,
+  "message": "Atividades listadas com sucesso",
+  "data": [
+    {
+      "id": 1,
+      "nome": "Projeção",
+      "foto": "https://exemplo.com/imagem1.jpg",
+      "cor_indicador": "#FF5733",
+      "categoria_atividade_id": 3,
+      "organizacao_id": 1,
+      "ministerio_id": 2
+    },
+    {
+      "id": 2,
+      "nome": "Iluminação",
+      "foto": "https://exemplo.com/imagem2.jpg",
+      "cor_indicador": "#00FF00",
+      "categoria_atividade_id": 4,
+      "organizacao_id": 1,
+      "ministerio_id": 2
+    }
+  ]
+}
+```
+
+***
+
+## Erros Comuns
+
+### 400 Bad Request
+
+Quando o parâmetro `organizacao_id` não é fornecido:
+
+```json
+{
+  "code": 400,
+  "message": "O parâmetro 'organizacao_id' é obrigatório."
+}
+```
+
+### 500 Internal Server Error
+
+Quando ocorre um erro no servidor:
+
+```json
+{
+  "code": 500,
+  "message": "Erro ao listar atividades. Tente novamente mais tarde."
+}
+```
+
+***
+
+## Notas
+
+* Este endpoint retorna apenas as atividades associadas à organização especificada no parâmetro `organizacao_id`.
+
+* O filtro `ministerio_id` é opcional, mas caso fornecido, refinará os resultados retornados.
