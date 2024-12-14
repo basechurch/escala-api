@@ -1,5 +1,5 @@
 {
-  "name": "Base Church ",
+  "name": "Base Church",
   "logo": {
     "light": "/logo/light.svg",
     "dark": "https://basechurch.com.br/wp-content/uploads/2024/11/00fb5728-e353-47df-a840-8a5e897ca1b4.png",
@@ -7,7 +7,7 @@
   },
   "favicon": "https://basechurch.com.br/wp-content/uploads/2024/11/00fb5728-e353-47df-a840-8a5e897ca1b4.png",
   "colors": {
-    "primary": "#0000",
+    "primary": "#000000",
     "light": "#55D799",
     "dark": "#117866"
   },
